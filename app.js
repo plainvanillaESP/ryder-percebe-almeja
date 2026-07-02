@@ -320,7 +320,7 @@ const views = {
       </div><div style="font-size:12px;color:var(--ink-soft)">Resultado neto de tus apuestas cerradas.</div></div></div>
 
       <div class="eyebrow">Próximos partidos</div>
-      ${next.length ? next.map((m) => matchCard(m, app.openMatch === m.id)).join("") : `<div class="empty">Todos los partidos cerrados. Mira la Bolsa 💰</div>`}
+      ${next.length ? next.map((m) => matchCard(m, app.openMatch === m.id)).join("") : `<div class="empty">Todos los partidos cerrados. Ya puedes ver el resultado en la Bolsa.</div>`}
     </div>`;
   },
 
@@ -381,7 +381,7 @@ const views = {
       .map((r, i) => {
         const t = pteam(r.u) === "percebe" ? "p" : "a";
         const cls = r.v > 0 ? "pos-v" : r.v < 0 ? "neg-v" : "zero-v";
-        return `<div class="lb-row"><span class="pos">${i + 1}</span>
+        return `<div class="lb-row ${r.u === app.user ? "me" : ""}"><span class="pos">${i + 1}</span>
           <div class="av ${t}">${initialOf(r.u)}</div>
           <span class="nm">${pname(r.u)}</span>
           <span class="pnl ${cls}">${money(r.v, true)}</span></div>`;
