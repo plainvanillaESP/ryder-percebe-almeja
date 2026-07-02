@@ -89,10 +89,10 @@ window.RYDER_CONFIG = {
       b: ["gete", "sainz"]     // Almeja
     },
 
-    // ---- DÍA 2 · INDIVIDUAL (por definir; el admin asigna jugadores) ----
-    { id: "d2p1", day: 2, format: "singles", label: "Individual 1", a: [], b: [] },
-    { id: "d2p2", day: 2, format: "singles", label: "Individual 2", a: [], b: [] },
-    { id: "d2p3", day: 2, format: "singles", label: "Individual 3", a: [], b: [] },
-    { id: "d2p4", day: 2, format: "singles", label: "Individual 4", a: [], b: [] }
+    // ---- DÍA 2 · INDIVIDUAL (emparejamientos por defecto; editables en Admin) ----
+    { id: "d2p1", day: 2, format: "singles", label: "Individual 1", a: ["frutos"], b: ["cueto"] },
+    { id: "d2p2", day: 2, format: "singles", label: "Individual 2", a: ["gaspi"],  b: ["sainz"] },
+    { id: "d2p3", day: 2, format: "singles", label: "Individual 3", a: ["bruno"],  b: ["gete"]  },
+    { id: "d2p4", day: 2, format: "singles", label: "Individual 4", a: ["richi"],  b: ["jose"]  }
   ]
 };
